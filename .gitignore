@@ -1,3 +1,5 @@
 .vscode/
 *.plist
 *.out
+*.o
+src/helloworld
