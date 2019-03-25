@@ -1,0 +1,4 @@
+namespace hello
+{
+    void printHelloWorld();
+}
