@@ -2,4 +2,4 @@
 *.plist
 *.out
 *.o
-src/helloworld
+src/geometry

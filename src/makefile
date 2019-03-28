@@ -7,16 +7,16 @@ LDIR =../lib
 
 LIBS=-lm
 
-_DEPS = helloworld.h
+_DEPS = geonode.h
 DEPS = $(patsubst %,$(IDIR)/%, $(_DEPS))
 
-_OBJ = helloworld.o hellofunc.o
+_OBJ = matrix.o matrixfunc.o
 OBJ = $(patsubst %,$(ODIR)/%, $(_OBJ))
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-helloworld: $(OBJ)
+geometry: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 .PHONEY: clean
