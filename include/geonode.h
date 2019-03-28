@@ -1,4 +1,4 @@
 namespace geonode
 {
-    void generateMatrix();
+    void generateMatrix(int x, int y);
 }
