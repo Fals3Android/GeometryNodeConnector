@@ -1,24 +1,29 @@
 #include "../../include/geonode.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-    int xAxis;
-    int yAxis;
+    vector<int> axis;
+    string data;
 
-    cout << "Enter the dimensions of your plane" << endl;
-    cout << "X Axis: " << endl;
-    cin >> xAxis;
-    cout << "Y Axis: " << endl;
-    cin >> yAxis;
+    ifstream graphsText ("./data/graphs.txt");
 
-    if (cin.fail())
-    {
-        cout << "Please enter a number" << endl;
-        return 1;
+    if(graphsText.is_open()) {
+        while( getline (graphsText, data) ) {
+            axis.push_back(stoi(data));
+        }
+        graphsText.close();
+    } else {
+        cout << "no data directory found please add one" << endl;
     }
+
+    int xAxis = axis.at(0);
+    int yAxis = axis.at(1);
 
     geonode::generateMatrix(xAxis, yAxis);
 
