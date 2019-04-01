@@ -1,4 +1,4 @@
-.vscode/
+.vscode/ipch
 *.plist
 *.out
 *.o
