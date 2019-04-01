@@ -1,4 +1,7 @@
+#include <vector>
+
 namespace geonode
 {
-    void generateMatrix(int x, int y);
+    std::vector<std::vector<int> > generateMatrix(int x, int y);
+    void printMatrix(std::vector<std::vector<int> > matrix);
 }

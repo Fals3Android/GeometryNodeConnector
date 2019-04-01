@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
@@ -19,13 +18,14 @@ int main()
         }
         graphsText.close();
     } else {
-        cout << "no data directory found please add one" << endl;
+        cout << "no data directory found please add one " << endl;
     }
 
     int xAxis = axis.at(0);
     int yAxis = axis.at(1);
 
-    geonode::generateMatrix(xAxis, yAxis);
+    vector<vector<int> > matrix = geonode::generateMatrix(xAxis, yAxis);
+    geonode::printMatrix(matrix);
 
     return 0;
 }
