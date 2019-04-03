@@ -36,9 +36,11 @@ int main()
     int xAxis = axis.at(0);
     int yAxis = axis.at(1);
 
-    vector<vector<int> > matrix = geonode::generateMatrix(xAxis, yAxis);
-    vector<vector<int> > newMatrix = geonode::populateMatrix(coordinates, matrix);
-    geonode::printMatrix(newMatrix);
+    vector<vector<int> > matrix;
+    
+    geonode::generateMatrix(xAxis, yAxis, &matrix);
+    geonode::populateMatrix(coordinates, &matrix);
+    geonode::printMatrix(&matrix);
 
     return 0;
 }
