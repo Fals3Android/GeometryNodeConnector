@@ -17,9 +17,8 @@ int main()
     if(graphsText.is_open()) {
 
         while( getline (graphsText, data, ',') ) {
-            float input = stof(data);
-            if (floor(input) == input) {
-                axis.push_back(input);
+            if(!boost::contains(data, ".")) {
+                axis.push_back(stoi(data));
             } else {
                 vector<string> results;
                 boost::split(results, data, boost::is_any_of("."));
@@ -37,7 +36,7 @@ int main()
     int yAxis = axis.at(1);
 
     vector<vector<int> > matrix;
-    
+
     geonode::generateMatrix(xAxis, yAxis, &matrix);
     geonode::populateMatrix(coordinates, &matrix);
     geonode::printMatrix(&matrix);

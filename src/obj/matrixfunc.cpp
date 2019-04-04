@@ -17,9 +17,9 @@ namespace geonode
 
     void populateMatrix(vector<vector<string> > coordinates, vector<vector<int> > *matrix)
     {
-        for(auto c : coordinates) {
-            int x = stoi(c.at(0));
-            int y = stoi(c.at(1));
+        for(auto coord : coordinates) {
+            int x = stoi(coord.at(0));
+            int y = stoi(coord.at(1));
             vector<int> *inner = &matrix->at(x);
             inner->at(y) = 1;
         }
