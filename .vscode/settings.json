@@ -1,0 +1,11 @@
+{
+    "eslint.enable": true,
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "terminal.integrated.shell.windows": "C:\\Cygwin64\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/bin/xhere",
+        "/bin/zsh"
+    ],
+    "window.zoomLevel": 0
+}
